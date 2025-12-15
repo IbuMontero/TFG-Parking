@@ -1,0 +1,19 @@
+EVALUACIÓN DE VULNERABILIDADES – SISTEMA DE PARKING
+
+1. Contraseñas débiles
+   - Riesgo de acceso no autorizado si no se aplican buenas prácticas.
+
+2. Exposición de servicios
+   - Servicios web o de base de datos accesibles desde la red.
+
+3. Errores en la aplicación web
+   - Fallos de validación de datos o manejo de sesiones.
+
+4. Configuración incorrecta del sistema
+   - Permisos excesivos o servicios innecesarios activos.
+
+5. Falta de monitorización
+   - No detectar caídas del servicio o backups antiguos.
+
+6. Fallos en copias de seguridad
+   - Backups no actualizados o no verificados.

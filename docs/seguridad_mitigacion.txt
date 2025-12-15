@@ -1,0 +1,24 @@
+ESTRATEGIAS DE MITIGACIÓN – SISTEMA DE PARKING
+
+1. Acceso no autorizado
+   - Uso de autenticación con usuarios y contraseñas.
+   - Separación de roles (administrador y usuario).
+   - Uso de contraseñas cifradas en la base de datos.
+
+2. Pérdida de datos
+   - Copias de seguridad automáticas diarias.
+   - Verificación periódica de los backups.
+   - Procedimiento de restauración documentado.
+
+3. Ataques a la base de datos
+   - Uso de usuario de base de datos con privilegios limitados.
+   - Validación de datos desde la aplicación web.
+
+4. Fallos del servicio
+   - Monitorización del estado de MySQL.
+   - Registro de alertas en logs del sistema.
+
+5. Errores humanos
+   - Documentación clara de procedimientos.
+   - Uso de usuarios sin privilegios para tareas básicas.
+

@@ -1,0 +1,25 @@
+IMPLEMENTACIÓN DEL PLAN DE SEGURIDAD – SISTEMA DE PARKING
+
+1. Gestión de usuarios y accesos
+   - Responsable: Administrador del sistema.
+   - Acción: Creación y mantenimiento de usuarios y roles.
+   - Herramientas: Sistema operativo Linux y base de datos MySQL.
+
+2. Protección de datos
+   - Responsable: Administrador del sistema.
+   - Acción: Configuración de copias de seguridad automáticas.
+   - Herramientas: mysqldump y cron.
+
+3. Monitorización del sistema
+   - Responsable: Administrador del sistema.
+   - Acción: Revisión periódica de logs y alertas.
+   - Herramientas: Script de monitorización y archivos de log.
+
+4. Servicios de red
+   - Responsable: Administrador del sistema.
+   - Acción: Mantenimiento de DNS y DHCP.
+   - Herramientas: Bind9 e ISC DHCP Server.
+
+5. Documentación y revisión
+   - Responsable: Administrador del sistema.
+   - Acción: Actualización de documentación y revisión del sistema.

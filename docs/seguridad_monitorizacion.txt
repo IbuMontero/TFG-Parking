@@ -1,0 +1,17 @@
+MONITORIZACIÓN Y REVISIÓN CONTINUA – SISTEMA DE PARKING
+
+1. Monitorización del sistema
+   - Se realiza una monitorización automática del servicio MySQL mediante un script.
+   - El script verifica el estado del servicio y la antigüedad de las copias de seguridad.
+   - Los resultados se registran en un archivo de log del sistema.
+
+2. Revisión periódica
+   - El administrador revisa periódicamente los logs generados.
+   - Se comprueba el correcto funcionamiento de los servicios críticos.
+
+3. Actualización del sistema
+   - Se aplican actualizaciones del sistema operativo y servicios.
+   - Se revisan configuraciones de seguridad cuando es necesario.
+
+4. Mejora continua
+   - El sistema se revisa para detectar posibles mejoras de seguridad o rendimiento.

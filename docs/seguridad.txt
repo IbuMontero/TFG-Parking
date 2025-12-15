@@ -1,0 +1,9 @@
+PLAN DE SEGURIDAD DEL SISTEMA DE PARKING
+
+- Copias automáticas diarias configuradas con cron.
+- Script Python para verificar backups.
+- Acceso a MySQL protegido con usuario y contraseña.
+- Acceso a servidor limitado a usuarios autorizados.
+- Contraseñas cifradas (pendiente implementar hash).
+- Control de roles: administrador / profesorado / alumnado.
+- Firewall activo y servicio Apache monitorizado.

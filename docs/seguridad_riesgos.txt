@@ -1,0 +1,31 @@
+ANÁLISIS DE RIESGOS – SISTEMA DE PARKING
+
+Riesgo 1: Acceso no autorizado
+- Activo afectado: Aplicación web / Base de datos
+- Probabilidad: Media
+- Impacto: Alto
+- Nivel de riesgo: Alto
+
+Riesgo 2: Pérdida de datos
+- Activo afectado: Base de datos
+- Probabilidad: Baja
+- Impacto: Alto
+- Nivel de riesgo: Medio
+
+Riesgo 3: Fallo del servicio web
+- Activo afectado: Servidor web
+- Probabilidad: Media
+- Impacto: Medio
+- Nivel de riesgo: Medio
+
+Riesgo 4: Backups no actualizados
+- Activo afectado: Copias de seguridad
+- Probabilidad: Media
+- Impacto: Alto
+- Nivel de riesgo: Alto
+
+Riesgo 5: Errores humanos
+- Activo afectado: Sistema completo
+- Probabilidad: Media
+- Impacto: Medio
+- Nivel de riesgo: Medio

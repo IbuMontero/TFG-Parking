@@ -1,0 +1,29 @@
+IDENTIFICACIÓN DE ACTIVOS – SISTEMA DE PARKING
+
+1. Servidor Ubuntu Server
+   - Sistema operativo que aloja todos los servicios.
+   - Activo crítico.
+
+2. Base de datos MySQL (parking)
+   - Contiene usuarios, plazas y reservas.
+   - Activo crítico.
+
+3. Aplicación web de gestión de parking
+   - Interfaz de acceso para administradores y usuarios.
+   - Activo crítico.
+
+4. Copias de seguridad de la base de datos
+   - Archivos SQL generados automáticamente.
+   - Activo crítico.
+
+5. Servicios de red (DNS y DHCP)
+   - Permiten resolución de nombres y asignación de IPs.
+   - Activo importante.
+
+6. Usuarios del sistema
+   - Administrador (sudo) y usuario estándar.
+   - Activo importante.
+
+7. Red local
+   - Infraestructura de comunicación.
+   - Activo importante.

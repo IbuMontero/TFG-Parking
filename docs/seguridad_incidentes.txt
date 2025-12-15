@@ -1,0 +1,27 @@
+PLAN DE RESPUESTA ANTE INCIDENTES – SISTEMA DE PARKING
+
+1. Detección del incidente
+   - El incidente puede ser detectado mediante la monitorización del sistema,
+     avisos del usuario o revisión de logs.
+
+2. Clasificación del incidente
+   - Se evalúa si el incidente afecta a la disponibilidad, integridad o
+     confidencialidad del sistema.
+
+3. Contención
+   - Se restringe el acceso al sistema si es necesario.
+   - Se detienen servicios afectados para evitar daños mayores.
+
+4. Erradicación
+   - Se corrige la causa del incidente (configuración, fallo de servicio, error humano).
+   - Se eliminan posibles amenazas detectadas.
+
+5. Recuperación
+   - Se restauran los datos mediante las copias de seguridad disponibles.
+   - Se verifica el correcto funcionamiento del sistema.
+
+6. Documentación del incidente
+   - El incidente se documenta indicando fecha, causa y acciones realizadas.
+
+7. Mejora posterior
+   - Se revisan las medidas de seguridad para evitar incidentes similares en el futuro.

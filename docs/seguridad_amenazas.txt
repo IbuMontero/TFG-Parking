@@ -1,0 +1,22 @@
+IDENTIFICACIÓN DE AMENAZAS – SISTEMA DE PARKING
+
+1. Acceso no autorizado
+   - Intentos de acceso a la aplicación o al sistema sin permisos.
+
+2. Pérdida de datos
+   - Eliminación accidental o fallo del sistema sin copias de seguridad.
+
+3. Ataques a la base de datos
+   - Inyección SQL o acceso indebido a la información.
+
+4. Fallos de hardware o software
+   - Caídas del servidor o corrupción de datos.
+
+5. Errores humanos
+   - Mala configuración del sistema o borrado involuntario de información.
+
+6. Ataques de red
+   - Uso indebido de servicios DNS o DHCP.
+
+7. Malware
+   - Instalación de software malicioso en el servidor.

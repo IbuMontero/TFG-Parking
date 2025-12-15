@@ -1,0 +1,27 @@
+ESQUEMA ENTIDAD / RELACIÓN – SISTEMA DE PARKING
+
+ENTIDAD: USUARIOS
+- id (PK)
+- nombre
+- email
+- rol
+- password_hash
+
+ENTIDAD: PLAZAS
+- id (PK)
+- tipo (coche, moto, bici)
+- reservado_para (ninguno, alumnado, profesorado, movilidad_reducida)
+- estado (libre, ocupada, reservada)
+
+ENTIDAD: RESERVAS
+- id (PK)
+- id_usuario (FK → usuarios.id)
+- id_plaza (FK → plazas.id)
+- fecha_reserva
+- hora_inicio
+- hora_fin
+
+RELACIONES:
+- Un usuario puede realizar varias reservas.
+- Una plaza puede tener varias reservas en distintos momentos.
+- Cada reserva pertenece a un único usuario y a una única plaza.

@@ -1,0 +1,38 @@
+BIBLIOGRAFÍA – PROYECTO PARKING ASIR
+
+- Documentación oficial de Ubuntu:
+  https://ubuntu.com/server/docs
+
+- Documentación oficial de Apache:
+  https://httpd.apache.org/docs/
+
+- Documentación oficial de MySQL:
+  https://dev.mysql.com/doc/
+
+- Documentación oficial de PHP:
+  https://www.php.net/docs.php
+
+- Manual de Bind9:
+  https://bind9.readthedocs.io/
+
+- Manual de ISC DHCP Server:
+  https://kb.isc.org/docs/isc-dhcp-44-manual-pages
+
+- Apuntes y material del ciclo formativo ASIR
+
+- Tutoriales que he visto:
+
+  * Curso MySQL desde cero – Fazt:
+    https://www.youtube.com/watch?v=7S_tz1z_5bA
+
+  * PHP y MySQL básico – Píldoras Informáticas:
+    https://www.youtube.com/watch?v=2eebptXfEvw
+
+  * Apache y Virtual Hosts en Linux:
+    https://www.youtube.com/watch?v=Kp7v9VQ1yVg
+
+  * Configuración de DNS con Bind9:
+    https://www.youtube.com/watch?v=8PqHqvY3r1A
+
+  * Configuración de DHCP en Linux:
+    https://www.youtube.com/watch?v=9cB1yL3g2mE
