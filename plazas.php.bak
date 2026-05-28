@@ -39,7 +39,7 @@ $result = $conn->query("SELECT * FROM plazas ORDER BY id ASC");
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<div>
+<div class="login-container">
     <h2>Gestión de Plazas</h2>
 
     <form method="POST" action="">

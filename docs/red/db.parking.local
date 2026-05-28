@@ -1,0 +1,17 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	parking.local. admin.parking.local. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	parking.local.
+@	IN	A	192.168.1.121
+www	IN	A       192.168.1.121
+dns     IN      A       192.168.1.121
+dhcp    IN      A       192.168.1.121
+db      IN      A       192.168.1.121

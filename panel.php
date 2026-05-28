@@ -7,6 +7,7 @@ if(!isset($_SESSION['user_id'])){
 
 $rol = $_SESSION['rol'];
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -17,19 +18,15 @@ $rol = $_SESSION['rol'];
 <body>
 <div class="login-container">
     <h2>Bienvenido al Sistema de Parking</h2>
-    <p>Tu rol: <b><?php echo ucfirst($rol); ?></b></p>
 
-    <?php if($rol == 'profesorado' || $rol == 'alumnado'): ?>
-    <a href="reservar.php"><button>Reservar Plaza</button></a>
-    <?php endif ?>
-
-    <?php if($rol == 'profesorado' || $rol == 'alumnado'): ?>
-    <a href="mis_reservas.php"><button>Mis Reservas</button></a>
-    <?php endif ?>
+    <p>Tu rol: <b><?php echo ucfirst(str_replace('_',' ', $rol)); ?></b></p>
 
     <?php if($rol == 'admin'): ?>
         <a href="plazas.php"><button>Gestionar Plazas</button></a>
-    <?php endif ?>
+    <?php else: ?>
+        <a href="reservar.php"><button>Reservar Plaza</button></a>
+        <a href="mis_reservas.php"><button>Mis Reservas</button></a>
+    <?php endif; ?>
 
     <a href="logout.php"><button>Salir</button></a>
 </div>

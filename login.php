@@ -38,14 +38,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+
 <div class="login-container">
+
     <h2>Acceso al Parking</h2>
-    <form method="POST" action="">
-        <input type="email" name="email" placeholder="Correo" required><br>
-        <input type="password" name="password" placeholder="Contraseña" required><br>
+
+    <form method="POST">
+
+        <input type="email" name="email" placeholder="Correo" required>
+
+        <input type="password" name="password" placeholder="Contraseña" required>
+
         <button type="submit">Entrar</button>
+
     </form>
-    <?php if(isset($error)) echo "<p style='color:red;'>$error</p>"; ?>
+
 </div>
+
 </body>
-</html>
