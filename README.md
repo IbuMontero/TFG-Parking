@@ -40,11 +40,13 @@ seguridad y automatización.
 
 ## Base de datos
 La base de datos `parking` está compuesta por las siguientes tablas:
+
 - `usuarios`
 - `plazas`
 - `reservas`
 
 Incluye:
+
 - **Vistas** para consulta de reservas.
 - **Índices** para optimización de consultas.
 - **Trigger** que actualiza automáticamente el estado de las plazas al realizar una reserva.
@@ -120,16 +122,84 @@ monitorización del estado del servicio MySQL.
 
 ---
 
-## Despliegue
-- Acceso a la aplicación:
+### 9. Acceso mediante dominio
+La aplicación es accesible mediante nombre de dominio en lugar de dirección IP.
 
-  http://192.168.1.99/parking/
+![Acceso por dominio](docs/capturas/09-dns-dominio.png)
+
+---
+
+## Despliegue
+Acceso a la aplicación mediante dominio:
+
+```text
+http://www.parking.local/parking/
+```
+
+---
+
+## Servicios de Red e Internet
+
+Para cumplir con los requisitos del módulo de Servicios de Red e Internet se han configurado los servicios de DNS y DHCP.
+
+### DNS
+
+Se ha configurado un servidor DNS mediante Bind9 con la zona:
+
+```text
+parking.local
+```
+
+Dentro de esta zona se han integrado distintos nombres de dominio asociados a los servicios del proyecto:
+
+```text
+www.parking.local   -> Servidor web
+dns.parking.local   -> Servidor DNS
+dhcp.parking.local  -> Servidor DHCP
+db.parking.local    -> Servidor de base de datos
+```
+
+El acceso a la aplicación se realiza mediante nombre de dominio en lugar de dirección IP:
+
+```text
+http://www.parking.local/parking/
+```
+
+La configuración del servicio DNS y el archivo de zona se encuentran en:
+
+```text
+docs/red/named.conf.local
+docs/red/named.conf.options
+docs/red/db.parking.local
+```
+
+### DHCP
+
+Se ha configurado un servidor DHCP para la asignación automática de direcciones IP dentro de la red local.
+
+La configuración del servicio DHCP se encuentra en:
+
+```text
+docs/red/dhcpd.conf
+```
+
+### Evidencias
+
+Se han añadido capturas de comprobación del funcionamiento de los servicios:
+
+```text
+docs/capturas/06-dns.png
+docs/capturas/07-dhcp.png
+docs/capturas/09-dns-dominio.png
+```
+
 ---
 
 ## Bitácora de tareas
 La bitácora del proyecto se encuentra documentada en:
 
 - `docs/bitacora.txt`
+
 ---
 
 ## Seguridad y Alta Disponibilidad
@@ -143,6 +213,7 @@ La documentación de seguridad del proyecto se encuentra en los siguientes archi
 - `docs/seguridad_implementacion.txt`
 - `docs/seguridad_monitorizacion.txt`
 - `docs/seguridad_incidentes.txt`
+
 ---
 
 ## Automatización y monitorización
@@ -150,6 +221,7 @@ La documentación de seguridad del proyecto se encuentra en los siguientes archi
 - Script de monitorización que verifica:
   - Estado del servicio MySQL.
   - Antigüedad de las copias de seguridad.
+
 ---
 
 ## Bibliografía
@@ -160,4 +232,5 @@ La documentación de seguridad del proyecto se encuentra en los siguientes archi
 - Apuntes del ciclo ASIR
 
 Archivo completo en:
+
 - `docs/bibliografia.txt`
