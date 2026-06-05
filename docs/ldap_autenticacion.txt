@@ -1,0 +1,36 @@
+AUTENTICACIÓN CON OPENLDAP – SISTEMA DE PARKING
+
+Base DN:
+dc=parking,dc=local
+
+Unidad organizativa:
+ou=usuarios,dc=parking,dc=local
+
+Usuarios LDAP creados:
+- uid=admin
+- uid=juan
+- uid=pepe
+
+Correos asociados:
+- admin@parking.com
+- juan@parking.com
+- pepe@parking.com
+
+Funcionamiento:
+1. El usuario introduce su correo y contraseña en la pantalla de login.
+2. La aplicación PHP busca el usuario en OpenLDAP mediante su correo.
+3. Si el usuario existe, se valida la contraseña contra LDAP.
+4. Si la autenticación es correcta, la aplicación consulta MySQL para obtener el rol del usuario.
+5. Según el rol, el usuario accede como administrador, alumnado o profesorado.
+
+Relación con MySQL:
+OpenLDAP valida las credenciales.
+MySQL mantiene los datos de la aplicación y los roles de usuario.
+
+Archivos relacionados:
+- login.php
+- includes/db.php
+
+Comprobación LDAP:
+ldapsearch -x -LLL -b dc=parking,dc=local uid mail cn
+

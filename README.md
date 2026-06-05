@@ -33,6 +33,7 @@ seguridad y automatización.
 - **Base de Datos:** MySQL
 - **Servicios de Red:** Bind9 (DNS), ISC DHCP Server (DHCP)
 - **Automatización:** Bash + Cron
+- **Autenticación:** OpenLDAP
 - **Scripting:** Python 3
 - **Control de versiones:** Git y GitHub
 
@@ -223,6 +224,26 @@ La documentación de seguridad del proyecto se encuentra en los siguientes archi
   - Antigüedad de las copias de seguridad.
 
 ---
+
+## Autenticación con OpenLDAP
+
+Se ha implementado autenticación de usuarios mediante OpenLDAP.
+
+El sistema funciona de la siguiente forma:
+
+- OpenLDAP valida las credenciales de acceso.
+- MySQL mantiene los datos propios de la aplicación y los roles.
+- La aplicación PHP busca el usuario en LDAP mediante su correo.
+- Si la autenticación es correcta, se consulta MySQL para obtener el rol del usuario.
+
+Usuarios configurados en LDAP:
+
+```text
+admin@parking.com
+juan@parking.com
+pepe@parking.com
+
+docs/ldap_autenticacion.txt
 
 ## Bibliografía
 - Documentación oficial de Ubuntu
