@@ -51,7 +51,13 @@ Incluye:
 - **Vistas** para consulta de reservas.
 - **Índices** para optimización de consultas.
 - **Trigger** que actualiza automáticamente el estado de las plazas al realizar una reserva.
+- **Función** `contar_reservas_usuario`, que calcula el número de reservas realizadas por un usuario.
+- **Procedimiento** `insertar_plaza_validada`, que inserta plazas validando los datos introducidos.
+- **Procedimiento** `crear_reserva_validada`, que crea reservas comprobando que el usuario y la plaza existan y que la plaza esté libre.
 
+El código SQL de las funciones y procedimientos se encuentra en:
+
+- `docs/sql/funciones_procedimientos.sql`
 ---
 
 ## Esquema E/R
