@@ -1,0 +1,45 @@
+dn: ou=usuarios,dc=parking,dc=local
+objectClass: organizationalUnit
+ou: usuarios
+
+dn: uid=admin,ou=usuarios,dc=parking,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+cn: Admin Parking
+sn: Parking
+uid: admin
+uidNumber: 10001
+gidNumber: 10001
+homeDirectory: /home/admin
+loginShell: /bin/bash
+mail: admin@parking.com
+userPassword: 1234
+
+dn: uid=juan,ou=usuarios,dc=parking,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+cn: Juan Parking
+sn: Parking
+uid: juan
+uidNumber: 10002
+gidNumber: 10002
+homeDirectory: /home/juan
+loginShell: /bin/bash
+mail: juan@parking.com
+userPassword: 1234
+
+dn: uid=pepe,ou=usuarios,dc=parking,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+cn: Pepe Parking
+sn: Parking
+uid: pepe
+uidNumber: 10003
+gidNumber: 10003
+homeDirectory: /home/pepe
+loginShell: /bin/bash
+mail: pepe@parking.com
+userPassword: 1234

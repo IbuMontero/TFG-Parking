@@ -89,7 +89,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <button type="submit">Entrar</button>
     </form>
 
-    <?php if(isset($error)) echo "<p style='color:red; margin-top:15px;'>$error</p>"; ?>
+	<?php if(isset($error)): ?>
+    		<div class="error-message">
+        		<?php echo htmlspecialchars($error); ?>
+    		</div>
+        <?php endif; ?>
 </div>
 
 </body>
