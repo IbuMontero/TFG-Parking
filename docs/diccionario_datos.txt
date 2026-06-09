@@ -1,0 +1,131 @@
+DICCIONARIO DE DATOS – SISTEMA DE PARKING
+
+BASE DE DATOS: parking
+
+
+TABLA: usuarios
+
+Descripción:
+Almacena los usuarios que pueden acceder a la aplicación.
+
+Campos:
+
+- id
+  Tipo: int
+  Clave: primaria
+  Descripción: identificador único de cada usuario.
+  Restricciones: auto_increment, no nulo.
+
+- nombre
+  Tipo: varchar(50)
+  Descripción: nombre del usuario.
+  Restricciones: no nulo.
+
+- email
+  Tipo: varchar(100)
+  Clave: única
+  Descripción: correo electrónico utilizado para identificar al usuario.
+  Restricciones: no nulo, único.
+
+- rol
+  Tipo: enum('admin','profesorado','alumnado','movilidad_reducida')
+  Descripción: define el perfil del usuario dentro de la aplicación.
+  Restricciones: no nulo.
+
+- password_hash
+  Tipo: varchar(255)
+  Descripción: contraseña almacenada de forma segura mediante hash.
+  Restricciones: no nulo.
+
+
+TABLA: plazas
+
+Descripción:
+Almacena las plazas disponibles en el parking.
+
+Campos:
+
+- id
+  Tipo: int
+  Clave: primaria
+  Descripción: identificador único de cada plaza.
+  Restricciones: auto_increment, no nulo.
+
+- tipo
+  Tipo: enum('coche','moto','bici')
+  Descripción: tipo de vehículo permitido en la plaza.
+  Restricciones: no nulo.
+
+- reservado_para
+  Tipo: enum('ninguno','alumnado','profesorado','movilidad_reducida')
+  Descripción: indica si la plaza está reservada para algún tipo de usuario.
+  Restricciones: no nulo.
+
+- estado
+  Tipo: enum('libre','ocupada','reservada')
+  Descripción: estado actual de la plaza.
+  Valor por defecto: libre.
+
+
+TABLA: reservas
+
+Descripción:
+Almacena las reservas realizadas por los usuarios.
+
+Campos:
+
+- id
+  Tipo: int
+  Clave: primaria
+  Descripción: identificador único de cada reserva.
+  Restricciones: auto_increment, no nulo.
+
+- id_usuario
+  Tipo: int
+  Clave: foránea
+  Descripción: identifica al usuario que realiza la reserva.
+  Referencia: usuarios(id)
+  Restricciones: no nulo.
+
+- id_plaza
+  Tipo: int
+  Clave: foránea
+  Descripción: identifica la plaza reservada.
+  Referencia: plazas(id)
+  Restricciones: no nulo.
+
+- fecha_reserva
+  Tipo: date
+  Descripción: fecha en la que se realiza la reserva.
+  Restricciones: no nulo.
+
+
+VISTA: vista_reservas
+
+Descripción:
+Vista utilizada para consultar de forma más sencilla la información de las reservas, relacionando usuarios y plazas.
+
+
+TRIGGER: trg_reserva_set_plaza_reservada
+
+Descripción:
+Trigger que se ejecuta después de insertar una reserva.
+Su función es actualizar automáticamente el estado de la plaza reservada a 'reservada'.
+
+
+FUNCIÓN: contar_reservas_usuario
+
+Descripción:
+Función que calcula el número total de reservas realizadas por un usuario.
+
+
+PROCEDIMIENTO: insertar_plaza_validada
+
+Descripción:
+Procedimiento que inserta una nueva plaza comprobando previamente que los valores introducidos sean válidos.
+
+
+PROCEDIMIENTO: crear_reserva_validada
+
+Descripción:
+Procedimiento que crea una reserva comprobando que el usuario exista, que la plaza exista y que la plaza esté libre.

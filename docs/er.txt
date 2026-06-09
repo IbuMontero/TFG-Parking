@@ -1,27 +1,118 @@
-ESQUEMA ENTIDAD / RELACIÓN – SISTEMA DE PARKING
+ESQUEMA ENTIDAD/RELACIÓN – SISTEMA DE PARKING
 
-ENTIDAD: USUARIOS
-- id (PK)
+ENTIDADES PRINCIPALES
+
+1. USUARIOS
+Representa a las personas que pueden acceder al sistema.
+
+Atributos:
+- id
 - nombre
 - email
 - rol
 - password_hash
 
-ENTIDAD: PLAZAS
-- id (PK)
-- tipo (coche, moto, bici)
-- reservado_para (ninguno, alumnado, profesorado, movilidad_reducida)
-- estado (libre, ocupada, reservada)
+Clave primaria:
+- id
 
-ENTIDAD: RESERVAS
-- id (PK)
-- id_usuario (FK → usuarios.id)
-- id_plaza (FK → plazas.id)
+Clave única:
+- email
+
+Roles posibles:
+- admin
+- profesorado
+- alumnado
+- movilidad_reducida
+
+
+2. PLAZAS
+Representa las plazas disponibles en el parking.
+
+Atributos:
+- id
+- tipo
+- reservado_para
+- estado
+
+Clave primaria:
+- id
+
+Tipos posibles:
+- coche
+- moto
+- bici
+
+Valores posibles de reservado_para:
+- ninguno
+- alumnado
+- profesorado
+- movilidad_reducida
+
+Estados posibles:
+- libre
+- ocupada
+- reservada
+
+
+3. RESERVAS
+Representa las reservas realizadas por los usuarios.
+
+Atributos:
+- id
+- id_usuario
+- id_plaza
 - fecha_reserva
-- hora_inicio
-- hora_fin
 
-RELACIONES:
-- Un usuario puede realizar varias reservas.
-- Una plaza puede tener varias reservas en distintos momentos.
-- Cada reserva pertenece a un único usuario y a una única plaza.
+Clave primaria:
+- id
+
+Claves foráneas:
+- id_usuario referencia a usuarios(id)
+- id_plaza referencia a plazas(id)
+
+
+RELACIONES ENTRE TABLAS
+
+USUARIOS 1:N RESERVAS
+
+Un usuario puede realizar varias reservas.
+Cada reserva pertenece a un único usuario.
+
+Ejemplo:
+Un alumno puede reservar una plaza varios días distintos, pero cada reserva queda asociada a ese usuario concreto.
+
+
+PLAZAS 1:N RESERVAS
+
+Una plaza puede aparecer en varias reservas a lo largo del tiempo.
+Cada reserva corresponde a una única plaza.
+
+Ejemplo:
+La plaza número 3 puede reservarse en distintos días, pero cada reserva guarda qué plaza concreta ha sido reservada.
+
+
+RESUMEN DEL MODELO
+
+El modelo de datos está formado por tres entidades principales:
+
+- usuarios
+- plazas
+- reservas
+
+La tabla reservas relaciona los usuarios con las plazas.
+
+Gracias a esta estructura se puede saber:
+- qué usuario ha realizado una reserva
+- qué plaza ha reservado
+- en qué fecha se ha realizado la reserva
+- qué estado tiene cada plaza
+
+REPRESENTACIÓN SIMPLE
+
+USUARIOS (1) -------- (N) RESERVAS
+PLAZAS   (1) -------- (N) RESERVAS
+
+Esto significa que:
+- un usuario puede tener muchas reservas
+- una plaza puede tener muchas reservas a lo largo del tiempo
+- cada reserva pertenece a un usuario y a una plaza concreta

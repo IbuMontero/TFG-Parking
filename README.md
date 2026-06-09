@@ -60,14 +60,17 @@ El código SQL de las funciones y procedimientos se encuentra en:
 - `docs/sql/funciones_procedimientos.sql`
 ---
 
-## Esquema E/R
+## Esquema E/R y diccionario de datos
+
 El esquema Entidad/Relación del sistema se encuentra documentado en:
 
 - `docs/er.txt`
 
-Incluye las entidades **usuarios**, **plazas** y **reservas**, con sus relaciones y 
-claves primarias y foráneas.
+El diccionario de datos de la base de datos se encuentra documentado en:
 
+- `docs/diccionario_datos.txt`
+
+Estos documentos describen las entidades principales del sistema, sus campos, claves primarias, claves foráneas, relaciones, vista, trigger, función y procedimientos almacenados.
 ---
 
 ## Tutorial de uso
