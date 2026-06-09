@@ -1,0 +1,26 @@
+SISTEMA DE CORREO Y CONTENEDOR – PARKING
+
+He añadido al proyecto un sistema de correo para que, cuando un usuario haga una reserva, se genere un aviso de confirmación.
+
+Para hacerlo he usado Docker con un contenedor llamado Mailpit. Este contenedor sirve para probar correos sin tener que usar una cuenta real de Gmail o Outlook. Así puedo comprobar que la aplicación manda bien los correos desde el propio entorno del proyecto.
+
+El contenedor que he usado es:
+
+* Nombre: mailpit
+* Imagen: axllent/mailpit
+* Puerto SMTP: 1025
+* Puerto web: 8025
+
+Para ver los correos se entra desde el navegador en:
+
+http://192.168.1.99:8025
+
+En la aplicación, cuando un usuario reserva una plaza, se envía automáticamente un correo de confirmación. En ese correo aparecen los datos básicos de la reserva, como el usuario, la plaza reservada y la fecha.
+
+Archivos añadidos o modificados:
+
+* includes/mail.php
+* reservar.php
+* assets/style.css
+* docs/correo_contenedor.txt
+
