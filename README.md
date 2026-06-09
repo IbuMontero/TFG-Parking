@@ -221,6 +221,14 @@ La documentación de seguridad del proyecto se encuentra en los siguientes archi
 - `docs/seguridad_monitorizacion.txt`
 - `docs/seguridad_incidentes.txt`
 
+### Despliegue seguro
+
+Se ha definido dónde y cómo se realiza el despliegue del sistema, teniendo en cuenta los activos principales y los riesgos asociados.
+
+El documento de despliegue seguro se encuentra en:
+
+- `docs/despliegue_seguro.txt`
+
 ---
 
 ## Automatización y monitorización

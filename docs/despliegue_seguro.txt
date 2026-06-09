@@ -1,0 +1,90 @@
+DESPLIEGUE SEGURO – SISTEMA DE GESTIÓN DE PARKING
+
+El sistema de gestión de parking se despliega en una máquina virtual local utilizando Ubuntu Server como sistema operativo.
+
+El despliegue se realiza en un entorno controlado mediante VirtualBox, simulando un servidor real dentro de una red local.
+
+ENTORNO DE DESPLIEGUE
+
+- Sistema operativo: Ubuntu Server 24.04 LTS
+- Virtualización: Oracle VirtualBox
+- Servidor web: Apache2
+- Lenguaje de aplicación: PHP
+- Base de datos: MySQL
+- Autenticación: OpenLDAP
+- Servicios de red: DNS mediante Bind9 y DHCP
+- Automatización: scripts y cron
+- Acceso a la aplicación: http://www.parking.local/parking/
+
+FORMA DE DESPLIEGUE
+
+La aplicación se encuentra ubicada en:
+
+/var/www/html/parking
+
+Desde esa ruta Apache sirve la aplicación web a los usuarios de la red.
+
+El acceso se realiza mediante el dominio interno:
+
+www.parking.local
+
+Este dominio está definido dentro de la zona DNS parking.local, configurada en Bind9.
+
+ACTIVOS PRINCIPALES
+
+Los activos más importantes del sistema son:
+
+1. Servidor Ubuntu
+   Es el sistema principal donde se ejecutan todos los servicios.
+
+2. Aplicación web
+   Permite gestionar plazas, reservas y usuarios.
+
+3. Base de datos MySQL
+   Contiene usuarios, plazas y reservas.
+
+4. Servicio OpenLDAP
+   Se utiliza para validar las credenciales de acceso.
+
+5. Servicio DNS
+   Permite acceder al sistema mediante nombre de dominio.
+
+6. Servicio DHCP
+   Permite la asignación automática de direcciones IP en la red.
+
+7. Copias de seguridad
+   Permiten recuperar la base de datos en caso de fallo.
+
+RIESGOS ASOCIADOS AL DESPLIEGUE
+
+Según los activos utilizados, se identifican los siguientes riesgos:
+
+- Caída del servidor virtual.
+- Fallo del servicio Apache.
+- Fallo o corrupción de la base de datos.
+- Acceso no autorizado a la aplicación.
+- Pérdida de datos por falta de copias de seguridad.
+- Fallo en la resolución DNS.
+- Cambio de IP del servidor.
+- Fallo del servicio LDAP.
+- Mala configuración de permisos en archivos del proyecto.
+
+MEDIDAS APLICADAS
+
+Para reducir estos riesgos se han aplicado varias medidas:
+
+- Uso de una máquina virtual aislada.
+- Configuración de IP fija para evitar cambios de dirección.
+- Acceso mediante dominio interno.
+- Autenticación de usuarios mediante OpenLDAP.
+- Roles de usuario en la aplicación.
+- Contraseñas almacenadas con hash.
+- Copias de seguridad automáticas de la base de datos.
+- Monitorización del servicio MySQL.
+- Documentación de la configuración de red y seguridad.
+- Uso de GitHub como repositorio del proyecto.
+
+CONCLUSIÓN
+
+El despliegue se realiza en una máquina virtual local que simula un entorno real de servidor. 
+La elección de este entorno permite controlar los servicios utilizados, identificar los activos principales y aplicar medidas de seguridad adaptadas a los riesgos del proyecto.
