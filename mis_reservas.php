@@ -41,10 +41,94 @@ $reservas = $conn->query($sql);
     <meta charset="UTF-8">
     <title>Mis Reservas</title>
     <link rel="stylesheet" href="assets/style.css">
-</head>
-<body>
+<link rel="stylesheet" href="assets/style.css">
 
-<div class="login-container">
+<style>
+body.pagina-reservas {
+    min-height: 100vh;
+    background-color: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 60px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.reservas-container {
+    width: 90%;
+    max-width: 900px;
+    background-color: #1e293b;
+    padding: 35px;
+    border-radius: 14px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.45);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.reservas-container h2 {
+    color: #38bdf8;
+    margin-bottom: 25px;
+}
+
+.reservas-container .table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.reservas-container table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #0f172a;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.reservas-container th,
+.reservas-container td {
+    padding: 14px 12px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.reservas-container th {
+    background-color: #38bdf8;
+    color: #020617;
+    font-weight: bold;
+}
+
+.reservas-container td {
+    color: white;
+    border-bottom: 1px solid #334155;
+}
+
+.reservas-container form button {
+    background-color: #ef4444;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.reservas-container a button {
+    margin-top: 25px;
+    width: 250px;
+    background-color: #38bdf8;
+    color: #020617;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+</style>
+
+</head>
+<body class="pagina-reservas">
+
+<div class="reservas-container">
     <h2>Mis Reservas Actuales</h2>
 
     <?php if ($reservas && $reservas->num_rows > 0): ?>

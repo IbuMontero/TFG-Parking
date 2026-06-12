@@ -218,3 +218,80 @@ form button:hover {
     font-weight: bold;
     text-align: center;
 }
+/* Tarjeta de Mis Reservas */
+.reservas-container {
+    width: 85% !important;
+    max-width: 950px !important;
+    margin: 60px auto !important;
+    background-color: #1e293b !important;
+    padding: 35px !important;
+    border-radius: 14px !important;
+    box-shadow: 0 0 20px rgba(0,0,0,0.45) !important;
+    text-align: center !important;
+}
+
+.reservas-container h2 {
+    color: #38bdf8 !important;
+    margin-bottom: 25px !important;
+    text-align: center !important;
+}
+
+.reservas-container .table-wrap {
+    width: 100% !important;
+    overflow-x: auto !important;
+}
+
+.reservas-container table {
+    width: 100% !important;
+    min-width: 720px !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    border-collapse: collapse !important;
+    background-color: #0f172a !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+}
+
+.reservas-container th,
+.reservas-container td {
+    padding: 14px 16px !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+}
+
+.reservas-container th {
+    background-color: #38bdf8 !important;
+    color: #020617 !important;
+    font-weight: bold !important;
+}
+
+.reservas-container td {
+    color: white !important;
+    border-bottom: 1px solid #334155 !important;
+}
+
+.reservas-container tr:last-child td {
+    border-bottom: none !important;
+}
+
+.reservas-container form button {
+    background-color: #ef4444 !important;
+    color: white !important;
+    padding: 10px 16px !important;
+    border-radius: 8px !important;
+    border: none !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+}
+
+.reservas-container a button {
+    margin-top: 25px !important;
+    width: 250px !important;
+    background-color: #38bdf8 !important;
+    color: #020617 !important;
+    padding: 12px !important;
+    border-radius: 8px !important;
+    border: none !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+}
